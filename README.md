@@ -21,12 +21,3 @@ A modern, fast, and scalable portfolio website designed for software developers 
 *   **Framework:** Next.js 15 (React)
 *   **Styling:** Tailwind CSS
 *   **Deployment:** Cloudflare Pages (or your deployment platform)
-
----
-
-## 🚀 Getting Started
-
-To get a local copy up and running, follow these simple steps:
-
-### Prerequisites
-Make sure you have Node.js installed on your machine.
