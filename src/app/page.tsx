@@ -48,11 +48,11 @@ export default function Home() {
                 <div className="relative mb-4 group">
                   <div className="absolute -inset-0.5 bg-gradient-to-b from-cyan-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
                   <div id="image-tooltip" role="tooltip" 
-                    className="absolute text-center bottom-2 left-1/2 -translate-x-1/2 z-10 pointer-events-none scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible group-active:scale-100 group-active:opacity-100 group-active:visible group-focus-within:scale-100 group-focus-within:opacity-100 group-focus-within:visible px-3 py-1.5 text-xs text-white bg-zinc-900 ring-1 ring-zinc-700/50 rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 ease-out"
+                    className="absolute text-center top-2 left-1/2 -translate-x-1/2 z-10 pointer-events-none scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible group-active:scale-100 group-active:opacity-100 group-active:visible group-focus-within:scale-100 group-focus-within:opacity-100 group-focus-within:visible px-3 py-1.5 text-xs text-white bg-zinc-900 ring-1 ring-zinc-700/50 rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 ease-out"
                   >
-                      Image by Innova Labs <br/> from Pixabay
+                      Image by Vilius Kukanauskas <br/> from Pixabay
                   </div>
-                  <Image aria-describedby="image-tooltip" alt="Profile Image - Image by Innova Labs from Pixabay" src={"/images/profile.webp"} priority width={170} height={180} 
+                  <Image aria-describedby="image-tooltip" alt="Profile Image - Image by Vilius Kukanauskas from Pixabay" src={"/images/profile.webp"} priority width={170} height={180} 
                     className="relative rounded-lg object-cover ring-1 ring-zinc-700/50 shadow-xl aspect-[3/4] pointer-events-none"
                   />
                 </div>
