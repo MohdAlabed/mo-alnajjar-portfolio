@@ -9,7 +9,7 @@ A modern, fast, and scalable portfolio website designed for software developers 
 ## ⚡ Features
 
 *   **Next.js 15 (App Router):** Leverages the latest React server components for optimal performance and routing.
-*   **Blazing Fast:** Implements dynamic imports and lazy loading to keep page speeds exceptionally high.
+*   **Static Site Generation (SSG):** Built as a static website using `generateStaticParams` for dynamic project routes, ensuring instant load times and global scalability.
 *   **Fully Responsive:** Styled with a utility-first approach using Tailwind CSS to ensure a seamless experience across all devices.
 *   **SEO Optimized:** Ready-to-go metadata generation and SEO best practices to help your portfolio rank.
 *   **Open Source:** Licensed under Apache 2.0—feel free to fork it, customize it, and make it your own!
