@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, useState, ReactNode, useMemo } from 'react';
+import { createContext, useContext, useState, ReactNode, useMemo, useEffect } from 'react';
 
 interface ScrollContextType {
   activeSection: string;
@@ -10,6 +10,16 @@ const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 
 export const ScrollProvider = ({ children }: { children: ReactNode }) => {
   const [activeSection, setActiveSection] = useState('hero');
+
+  useEffect(() => {
+    const hash = window.location.hash.split('#')[1];
+
+    if (hash) {
+      setActiveSection(hash);
+    } else if (window.scrollY === 0) {
+      setActiveSection('hero');
+    }
+  }, []);
 
   // Memoize to prevent unnecessary re-renders
   const value = useMemo(() => ({

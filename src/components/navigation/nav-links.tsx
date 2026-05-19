@@ -29,7 +29,6 @@ const NavLinks = () => {
             {navItems.map((item) => {
                 const sectionId = item.href.split('#')[1];
                 
-                // 2. CLEANER FUNCTIONAL LOGIC: Pure ternary evaluation with 'const'
                 const isActive = pathname.startsWith('/projects')
                     ? item.id === 'projects'
                     : activeSection === sectionId;
