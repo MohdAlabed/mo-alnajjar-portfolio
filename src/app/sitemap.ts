@@ -12,6 +12,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: baseUrl,
       lastModified: new Date("2026-05-19"),
     },
+    //resume route
+    {
+      url: `${baseUrl}/docs/mohammed-alnajjar-resume.pdf`,
+      lastModified: new Date("2026-05-21"),
+    },
   ];
 
   // Dynamic Routes (Projects)

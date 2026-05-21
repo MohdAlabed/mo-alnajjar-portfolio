@@ -86,7 +86,7 @@ export default function Home() {
                   })}
                 </ul>
 
-                <a href="/docs/Mohammed_Al-Najjar_Resume.pdf" rel="noopener noreferrer" target="_blank" 
+                <a href="/docs/mohammed-alnajjar-resume.pdf" rel="noopener noreferrer" target="_blank" 
                   className="w-full text-center text-sm font-semibold px-6 py-3.5 rounded-xl bg-white text-black transition-colors hover:bg-zinc-200 active:scale-95 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-black shadow-[0_0_20px_rgba(255,255,255,0.1)]"
                 >
                   View Résumé
