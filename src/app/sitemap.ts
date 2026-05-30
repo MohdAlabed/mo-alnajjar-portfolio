@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: new Date("2026-05-19"),
+      lastModified: new Date("2026-05-30"),
     },
     //resume route
     {

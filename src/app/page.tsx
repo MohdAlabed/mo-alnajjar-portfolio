@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import Image from "next/image";
-import Link from "next/link";
 import MainPageClient from '@/components/main-sections/main-client';
 import { Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from "../components/icons/social-icons";
@@ -24,7 +23,7 @@ interface profileItem {
 }
 
 const profileItems: profileItem[] = [
-  { id:'linkedin', icon: LinkedinIcon, href:'https://www.linkedin.com/in/mohammed-abdallah-960980266/', label: 'Linkedin Profile' },
+  { id:'linkedin', icon: LinkedinIcon, href:'https://www.linkedin.com/in/mohammed-al-najjar-960980266/', label: 'Linkedin Profile' },
   { id:'github', icon: GithubIcon, href:'https://github.com/MohdAlabed', label:'GitHub Projects' },
   { id:'email', icon: Mail, href:'mailto:mohammedal-najjar@outlook.com', label:'Email: Get in Touch' },
 ];
@@ -46,21 +45,21 @@ export default function Home() {
 
                 {/* Profile Image */}
                 <div className="relative mb-4 group">
-                  <div className="absolute -inset-0.5 bg-gradient-to-b from-cyan-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                  <div className="absolute -inset-0.5 bg-gradient-to-b from-cyan-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-50 group-active:opacity-50 transition duration-500"></div>
                   <div id="image-tooltip" role="tooltip" 
-                    className="absolute text-center top-2 left-1/2 -translate-x-1/2 z-10 pointer-events-none scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible group-active:scale-100 group-active:opacity-100 group-active:visible group-focus-within:scale-100 group-focus-within:opacity-100 group-focus-within:visible px-3 py-1.5 text-xs text-white bg-zinc-900 ring-1 ring-zinc-700/50 rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 ease-out"
+                    className="absolute text-center top-2 left-1/2 -translate-x-1/2 z-10 scale-95 opacity-0 invisible group-hover:scale-100 group-hover:opacity-100 group-hover:visible group-active:scale-100 group-active:opacity-100 group-active:visible group-focus-within:scale-100 group-focus-within:opacity-100 group-focus-within:visible p-1.5 text-xs text-white bg-zinc-900 ring-1 ring-zinc-700/50 rounded-lg whitespace-nowrap shadow-xl transition-all duration-200 ease-out"
                   >
-                      Image by Vilius <br/> Kukanauskas from Pixabay
+                    Image by <a rel="noopener noreferrer" target="_blank" className='underline' href="https://pixabay.com/users/vilkasss-35420724/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8764521">Vilius <br/> Kukanauskas</a> from <a rel="noopener noreferrer" target="_blank" className='underline' href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8764521">Pixabay</a>
                   </div>
-                  <Image aria-describedby="image-tooltip" alt="Profile Image - Image by Vilius Kukanauskas from Pixabay" src={"/images/profile.webp"} priority width={170} height={180} 
+                  <Image aria-describedby="image-tooltip" alt="Mohammed Al-Najjar - Next.js and AI Software Engineer" src={"/images/profile.webp"} priority width={170} height={180} 
                     className="relative rounded-lg object-cover ring-1 ring-zinc-700/50 shadow-xl aspect-[3/4] pointer-events-none"
                   />
                 </div>
 
                 {/* Profile Text */}
                 <div className="text-center w-full tracking-wide">
-                  <h1 className="text-3xl font-extrabold text-white">Mohammed</h1>
-                  <h1 className="text-2xl font-black text-zinc-400 mb-3">Al-Najjar</h1>
+                  <div className="text-3xl font-extrabold text-white">Mohammed</div>
+                  <div className="text-2xl font-black text-zinc-400 mb-3">Al-Najjar</div>
 
                   <p className="text-sm text-zinc-300 leading-relaxed px-2 mb-6">
                     Crafting high-performance digital experiences. Specializing in modern web architecture and AI integrations.
@@ -76,11 +75,11 @@ export default function Home() {
                     return (
                       <li key={item.id} className='relative'>
                         <div className="absolute -inset-0.5 bg-gradient-to-b from-cyan-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
-                        <Link href={item.href} aria-label={item.label} rel="noopener noreferrer" target="_blank"
+                        <a href={item.href} aria-label={item.label} rel="noopener noreferrer" target="_blank"
                           className="relative group flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/75 border-2 border-zinc-700/50 hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
                         >
                           <IconComponent strokeWidth={2.5} className="text-cyan-600/90 w-6 h-6 transition-all duration-300 group-hover:text-cyan-600 group-hover:scale-110"/>
-                        </Link>
+                        </a>
                       </li>
                     )
                   })}
@@ -99,12 +98,14 @@ export default function Home() {
             
             {/* Hero Text */}
             <header className="mx-4">
-              <h1 className="font-black text-6xl lg:text-7xl tracking-tighter mb-2">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 drop-shadow-sm">NEXT.JS</span> 
-                <span className="text-white">&</span>
-              </h1>
               <h1 className="font-black text-6xl lg:text-7xl tracking-tighter">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500 drop-shadow-sm">AI ENGINEER</span>
+                <span className="mb-2 block">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 sm:to-blue-600 drop-shadow-sm pr-[0.1em]">
+                    <span className="pr-[0.1em] sm:pr-0">NEXT.JS</span>{' '}DEV
+                  </span> 
+                  <span className="text-white">&</span>
+                </span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500 drop-shadow-sm pr-[0.1em]">AI ENGINEER</span>
               </h1>
               <p className="mt-8 text-zinc-400 text-lg max-w-2xl leading-relaxed">
                 I build fast, secure, and accessible web applications. Bridging the gap between cutting-edge artificial intelligence and robust frontend ecosystems.
@@ -120,8 +121,8 @@ export default function Home() {
 
         <footer id="contact" className="flex flex-col items-center text-center py-32 mt-12 border-t border-zinc-800/50 mx-4">
           <div className="max-w-2xl w-full">
-            <h1 className="font-black text-white text-5xl tracking-tight mb-4">Get In Touch</h1>
-            <h2 className="font-black text-white text-3xl tracking-tight mb-5">{`Let's Build Something!`}</h2>
+            <h2 className="font-black text-white text-5xl tracking-tight mb-4">Get In Touch</h2>
+            <h3 className="font-black text-white text-3xl tracking-tight mb-5">{`Let's Build Something!`}</h3>
             <p className="text-zinc-400 text-lg mb-10">{`I'm always open to discussing new projects and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!`}</p>
                   
             <a href='mailto:mohammedal-najjar@outlook.com'
@@ -135,8 +136,8 @@ export default function Home() {
           </div>
 
           <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center mt-32 pt-8 border-t border-zinc-900 gap-5 font-mono">
-            <h6 className="text-zinc-500 leading-relaxed text-sm">© 2026 Mohammed Al-Najjar. All rights reserved.</h6>
-            <h6 className="text-zinc-600 text-sm">Amman, JO</h6>
+            <small className="text-zinc-500 leading-relaxed text-sm">© 2026 Mohammed Al-Najjar. All rights reserved.</small>
+            <small className="text-zinc-600 text-sm">Amman, JO</small>
           </div>
         </footer>
       </div>
