@@ -43,6 +43,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
