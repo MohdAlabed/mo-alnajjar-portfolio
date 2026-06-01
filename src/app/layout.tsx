@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Mohammed Al-Najjar",
   },
   description: "Welcome! I'm Mohammed Al-Najjar, an up-and-coming Next.js & AI Engineer. Explore my recent projects, dev journey, and feel free to reach out.",
-  keywords: ["Mohammed Al-Najjar", "Portfolio", "Full-Stack Developer", "Python Developer", "AI Engineer", "Next.js", "React"],
+  keywords: ["Mohammed Al-Najjar", "Portfolio", "Full-Stack Developer", "Python Developer", "Data and AI", "Data Analysis", "Data Scientist", "AI Engineer", "Next.js", "React"],
   authors: [{ name: "Mohammed Al-Najjar" }],
   creator: "Mohammed Al-Najjar",
   metadataBase: new URL("https://mohammedalnajjar.pages.dev"),

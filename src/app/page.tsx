@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import MainPageClient from '@/components/main-sections/main-client';
-import { Mail } from 'lucide-react';
+import ObfuscatedEmail from '@/components/main-sections/ObfuscatedEmail';
 import { GithubIcon, LinkedinIcon } from "../components/icons/social-icons";
 
 // Dynamic Imports: Loads JS only when needed.
@@ -24,8 +24,7 @@ interface profileItem {
 
 const profileItems: profileItem[] = [
   { id:'linkedin', icon: LinkedinIcon, href:'https://www.linkedin.com/in/mohammed-al-najjar-960980266/', label: 'Linkedin Profile' },
-  { id:'github', icon: GithubIcon, href:'https://github.com/MohdAlabed', label:'GitHub Projects' },
-  { id:'email', icon: Mail, href:'mailto:mohammedal-najjar@outlook.com', label:'Email: Get in Touch' },
+  { id:'github', icon: GithubIcon, href:'https://github.com/MohdAlabed', label:'GitHub Projects' }
 ];
 
 export default function Home() {
@@ -73,16 +72,17 @@ export default function Home() {
                   {profileItems.map((item) => {
                     const IconComponent = item.icon;
                     return (
-                      <li key={item.id} className='relative'>
+                      <li key={item.id} className='relative group'>
                         <div className="absolute -inset-0.5 bg-gradient-to-b from-cyan-500 to-orange-500 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
                         <a href={item.href} aria-label={item.label} rel="noopener noreferrer" target="_blank"
-                          className="relative group flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/75 border-2 border-zinc-700/50 hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                          className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/75 border-2 border-zinc-700/50 hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
                         >
                           <IconComponent strokeWidth={2.5} className="text-cyan-600/90 w-6 h-6 transition-all duration-300 group-hover:text-cyan-600 group-hover:scale-110"/>
                         </a>
                       </li>
                     )
                   })}
+                  <ObfuscatedEmail variant="sidebar" />
                 </ul>
 
                 <a href="/docs/mohammed-alnajjar-resume.pdf" rel="noopener noreferrer" target="_blank" 
@@ -123,16 +123,8 @@ export default function Home() {
           <div className="max-w-2xl w-full">
             <h2 className="font-black text-white text-5xl tracking-tight mb-4">Get In Touch</h2>
             <h3 className="font-black text-white text-3xl tracking-tight mb-5">{`Let's Build Something!`}</h3>
-            <p className="text-zinc-400 text-lg mb-10">{`I'm always open to discussing new projects and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!`}</p>
-                  
-            <a href='mailto:mohammedal-najjar@outlook.com'
-              className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-zinc-900 px-4 sm:px-8 font-light sm:text-base text-sm text-white border border-zinc-700 hover:border-cyan-500/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black"
-            >
-              <span className="flex items-center justify-between sm:gap-3 gap-2 whitespace-nowrap">
-                <Mail className="w-5 h-5 text-cyan-500" />
-                mohammedal-najjar@outlook.com
-              </span>
-            </a>  
+            <p className="text-zinc-400 text-lg mb-10">{`I'm always open to discussing new projects and opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!`}</p>       
+            <ObfuscatedEmail variant="footer" />
           </div>
 
           <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center mt-32 pt-8 border-t border-zinc-900 gap-5 font-mono">
