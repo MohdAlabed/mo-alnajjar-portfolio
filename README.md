@@ -2,7 +2,7 @@
 
 A modern, fast, and scalable portfolio website designed for software developers to showcase their projects, skills, and development stack. Built using the latest **Next.js 15** and styled with **Tailwind CSS**.
 
-🔗 **Live Demo:** [https://mohammedalnajjar.pages.dev/](https://mohammedalnajjar.pages.dev/)
+🔗 **Live Demo:** [https://mohammedalnajjar.site/](https://mohammedalnajjar.site/)
 
 ---
 
