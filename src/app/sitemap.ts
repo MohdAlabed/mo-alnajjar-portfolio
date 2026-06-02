@@ -4,7 +4,7 @@ import { getProjectSitemapData } from "@/services/project/getProjectSitemapData"
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mohammedalnajjar.pages.dev";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mohammedalnajjar.site";
 
   // Static Routes (Homepage)
   const routes: MetadataRoute.Sitemap = [

@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     openGraph: {
       title: project.title,
       description: project.description,
-      url: `https://mohammedalnajjar.pages.dev/projects/${projectSlug}`,
+      url: `https://mohammedalnajjar.site/projects/${projectSlug}`,
       type: "article",
       images: [
         {

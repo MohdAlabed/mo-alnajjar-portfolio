@@ -6,17 +6,26 @@ import { useState, useEffect } from "react";
 const ENCODED_EMAIL = "bW9oYW1tZWRhbC1uYWpqYXJAb3V0bG9vay5jb20=";
 
 export default function SecureEmail({ variant = "footer" }: { variant?: "sidebar" | "footer" }) {
-  const [isMounted, setIsMounted] = useState(false);
+  const [email, setEmail] = useState<string | null>(null);
 
   useEffect(() => {
-    setIsMounted(true);
+    try {
+      setEmail(atob(ENCODED_EMAIL));
+    } catch {
+      console.error("Failed to decode email.");
+      setEmail("Contact Error");
+    }
   }, []);
 
   const handleEmailClick = () => {
+    if (!email || email === "Contact Error") {
+      console.error("Unable to load email address.");
+      return;
+    }
+
     try {
-      const decodedEmail = atob(ENCODED_EMAIL);
-      window.location.href = `mailto:${decodedEmail}`;
-    } catch (error) {
+      window.location.href = `mailto:${email}`;
+    } catch {
       console.error("Failed to route to email.");
     }
   };
@@ -29,7 +38,8 @@ export default function SecureEmail({ variant = "footer" }: { variant?: "sidebar
         <button
           onClick={handleEmailClick}
           aria-label="Send an email to Mohammed"
-          className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/75 border-2 border-zinc-700/50 hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 cursor-pointer"
+          disabled={!email} 
+          className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-zinc-800/75 border-2 border-zinc-700/50 hover:bg-zinc-800 hover:border-cyan-500/50 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Mail strokeWidth={2.5} className="text-cyan-600/90 w-6 h-6 transition-all duration-300 group-hover:text-cyan-600 group-hover:scale-110" />
         </button>
@@ -42,11 +52,12 @@ export default function SecureEmail({ variant = "footer" }: { variant?: "sidebar
     <button
       onClick={handleEmailClick}
       aria-label="Send an email to Mohammed"
-      className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-zinc-900 px-4 sm:px-8 font-light sm:text-base text-sm text-white border-2 border-zinc-700 hover:border-cyan-500/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer w-full sm:w-auto"
+      disabled={!email}
+      className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full bg-zinc-900 px-4 sm:px-8 font-light sm:text-base text-sm text-white border-2 border-zinc-700 hover:border-cyan-500/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black cursor-pointer w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
     >
       <span className="flex items-center justify-center sm:gap-3 gap-2 whitespace-nowrap">
         <Mail className="w-5 h-5 text-cyan-500" />
-        <span>{isMounted ? atob(ENCODED_EMAIL) : "Loading contact..."}</span>
+        <span>{email ? email : "Loading contact..."}</span>
       </span>
     </button>
   );

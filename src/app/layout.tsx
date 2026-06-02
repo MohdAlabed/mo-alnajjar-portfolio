@@ -19,20 +19,17 @@ export const metadata: Metadata = {
     default: "Mohammed Al-Najjar | Next.js & AI Engineer",
     template: "%s | Mohammed Al-Najjar",
   },
-  description: "Welcome! I'm Mohammed Al-Najjar, an up-and-coming Next.js & AI Engineer. Explore my recent projects, dev journey, and feel free to reach out.",
+  description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Next.js & AI Engineer bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
   keywords: ["Mohammed Al-Najjar", "Portfolio", "Full-Stack Developer", "Python Developer", "Data and AI", "Data Analysis", "Data Scientist", "AI Engineer", "Next.js", "React"],
   authors: [{ name: "Mohammed Al-Najjar" }],
   creator: "Mohammed Al-Najjar",
-  metadataBase: new URL("https://mohammedalnajjar.pages.dev"),
-  alternates: {
-    canonical: '/',
-  },
+  metadataBase: new URL("https://mohammedalnajjar.site"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://mohammedalnajjar.pages.dev",
+    url: "https://mohammedalnajjar.site",
     title: "Mohammed Al-Najjar | Portfolio",
-    description: "Mohammed Al-Najjar | Up-and-coming Next.js & AI Engineer crafting modern web experiences. Explore my projects and get to know me!",
+    description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Next.js & AI Engineer bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
     siteName: "Mohammed Al-Najjar Portfolio",
     images: [
       {
