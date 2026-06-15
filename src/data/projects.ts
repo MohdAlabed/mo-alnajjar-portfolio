@@ -12,7 +12,7 @@ export const PROJECTS_LIST: IProjectData[] = [
             {url:'/images/projects/immersive-website/immersive-website-3.webp', alt:'immersive-website-3'},
         ],
         startDate: '2025-11-01',
-        endDate: null,
+        endDate: '2026-04-01',
         tags: ['Next.js', 'Agentic AI', 'Full-Stack', 'LLM', 'Tailwind', 'PyTorch', 'zustand','Framer Motion', 'NLP', 'Hugging Face'],
     },
 
