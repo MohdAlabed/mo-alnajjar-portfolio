@@ -100,12 +100,10 @@ export default function Home() {
             <header className="mx-4">
               <h1 className="font-black text-6xl lg:text-7xl tracking-tighter">
                 <span className="mb-2 block">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 sm:to-blue-600 drop-shadow-sm pr-[0.1em]">
-                    <span className="pr-[0.1em] sm:pr-0">NEXT.JS</span>{' '}DEV
-                  </span> 
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-sm pr-[0.1em]">Software Engineer</span> 
                   <span className="text-white">&</span>
                 </span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500 drop-shadow-sm pr-[0.1em]">AI ENGINEER</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500 drop-shadow-sm pr-[0.1em]">Data Specialist</span>
               </h1>
               <p className="mt-8 text-zinc-400 text-lg max-w-2xl leading-relaxed">
                 I build fast, secure, and accessible web applications. Bridging the gap between cutting-edge artificial intelligence and robust frontend ecosystems.
