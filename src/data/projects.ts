@@ -4,7 +4,7 @@ export const PROJECTS_LIST: IProjectData[] = [
     {
         projectSlug  : 'immersive-ecommerce-website',
         title: 'Immersive E-commerce Website',
-        description: 'A responsive website that can be adapted to any type of E-commerce such as retail, grocery, wholesale goods, and more. Built using Next.js and Tailwind with a focus on SEO and best practices to enhance performance, user experience, and speed. The website is set to use agentic AI which acts as a shopping assistant and AI customer support. Along with other advancements that should enhance customer experience, and drive sells. \n\nThe website component of the project has been largely completed, but was unfortunately suspended due to external client factors.',
+        description: 'A highly responsive, adaptable e-commerce storefront designed to scale across retail, grocery, and wholesale domains. Developed utilizing Next.js, Tailwind CSS, and zustand with a strict focus on SEO optimization, lightning-fast load times, and intuitive user experience. \n\nThe frontend architecture and UI were specifically designed and structured to support the future integration of an agentic AI shopping assistant to drive sales and automate customer support.',
         thumbnail: {url:'/images/projects/immersive-website/thumbnail.webp', alt:'immersive-website-thumbnail'},
         images: [
             {url:'/images/projects/immersive-website/immersive-website-1.webp', alt:'immersive-website-1'},
