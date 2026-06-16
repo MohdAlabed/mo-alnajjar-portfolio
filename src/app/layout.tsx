@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mohammed Al-Najjar | Software Engineer & Data Specialist",
+    default: "Mohammed Al-Najjar | Software Developer & Data Specialist",
     template: "%s | Mohammed Al-Najjar",
   },
-  description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Software Engineer & Data Specialist bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
+  description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Software Developer & Data Specialist bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
   keywords: ["Mohammed Al-Najjar", "Portfolio", "Full-Stack Developer", "Python Developer", "Data and AI", "Data Analysis", "Data Scientist", "Next.js", "React"],
   authors: [{ name: "Mohammed Al-Najjar" }],
   creator: "Mohammed Al-Najjar",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mohammedalnajjar.site",
     title: "Mohammed Al-Najjar | Portfolio",
-    description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Software Engineer & Data Specialist bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
+    description: "Welcome! I'm Mohammed Al-Najjar, an enthusiastic Software Developer & Data Specialist bringing fresh ideas to the web. Explore my dev journey, projects, and let's have a chat!",
     siteName: "Mohammed Al-Najjar Portfolio",
     images: [
       {

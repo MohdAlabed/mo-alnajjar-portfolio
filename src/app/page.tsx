@@ -100,7 +100,7 @@ export default function Home() {
             <header className="mx-4">
               <h1 className="font-black text-6xl lg:text-7xl tracking-tighter">
                 <span className="mb-2 block">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-sm pr-[0.1em]">Software Engineer</span> 
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 drop-shadow-sm pr-[0.1em]">Software Developer</span> 
                   <span className="text-white">&</span>
                 </span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-rose-500 drop-shadow-sm pr-[0.1em]">Data Specialist</span>
